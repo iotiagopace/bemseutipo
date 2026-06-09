@@ -200,6 +200,65 @@ function enviarFormulario(){
     .catch(function(){ window.location.href = '/obrigado'; });
 }
 
+/* ===== CASES DINÂMICOS DO CMS ===== */
+(function(){
+  var grid = document.getElementById('casesGrid');
+  if (!grid) return;
+
+  function buildCase(item) {
+    var bullets = (item.bullets || '')
+      .split('\n').filter(Boolean)
+      .map(function(b){ return '<li>' + b.trim() + '</li>'; }).join('');
+
+    return '<div class="cc reveal">' +
+      '<div class="cc-head">' +
+        '<span class="cc-seg">' + (item.category || '') + '</span>' +
+        '<div class="cc-client">' + (item.client || item.title || '') + '</div>' +
+        '<div class="cc-result">' + (item.result || '') + '</div>' +
+      '</div>' +
+      '<div class="cc-body">' +
+        (item.scenario ? '<div class="cc-lbl">O cenário</div><p>' + item.scenario + '</p>' : '') +
+        (item.strategy ? '<div class="cc-lbl">A estratégia BST</div><p>' + item.strategy + '</p>' : '') +
+        (bullets ? '<ul class="cc-bul">' + bullets + '</ul>' : '') +
+      '</div>' +
+    '</div>';
+  }
+
+  fetch('/api/cms/public/sections/cases')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var items = data.data || [];
+      if (!items.length) return;
+      grid.innerHTML = items.map(buildCase).join('');
+      grid.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+    })
+    .catch(function(){});
+})();
+
+/* ===== MÉTRICAS DINÂMICAS DO CMS ===== */
+(function(){
+  var grid = document.getElementById('metricsGrid');
+  if (!grid) return;
+
+  fetch('/api/cms/public/sections/metrics')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var items = data.data || [];
+      if (!items.length) return;
+      grid.innerHTML = items.map(function(item){
+        return '<div class="met-item reveal">' +
+          '<div class="met-num" data-target="' + (item.target || 0) + '" data-suffix="' + (item.suffix || '') + '">' +
+            (item.target || '') + (item.suffix || '') +
+          '</div>' +
+          '<div class="met-label">' + (item.label || item.title || '') + '</div>' +
+        '</div>';
+      }).join('');
+      grid.querySelectorAll('.met-num[data-target]').forEach(function(el){ metObs.observe(el); });
+      grid.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+    })
+    .catch(function(){});
+})();
+
 /* ===== FAQ DINÂMICO DO CMS ===== */
 (function(){
   var faqSection = document.getElementById('faq');

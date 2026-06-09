@@ -53,6 +53,19 @@ window.CMS_CONFIG = {
       ]
     },
     {
+      id: "metrics",
+      label: "Métricas",
+      group: "conteudo",
+      icon: "bar-chart",
+      table: "metrics",
+      categories: ["Destaque"],
+      fields: [
+        { id: "target",  label: "Número (ex: 18)",    type: "text", card: true, placeholder: "18" },
+        { id: "suffix",  label: "Sufixo (ex: x, +%)", type: "text", card: true, placeholder: "x" },
+        { id: "label",   label: "Descrição",           type: "text",             placeholder: "Retorno máximo sobre investimento" }
+      ]
+    },
+    {
       id: "depoimentos",
       label: "Depoimentos",
       group: "relacionamento",
