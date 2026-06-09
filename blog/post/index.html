@@ -297,52 +297,79 @@ function renderRelated(posts, currentSlug) {
   `).join('');
 }
 
+function normalizePost(p) {
+  return {
+    ...p,
+    date: p.created_at?.slice(0,10) || p.date || '',
+    readTime: p.reading_time || p.readTime || '5 min',
+    excerpt: p.excerpt || '',
+    author: p.author || 'BST Marketing',
+    content: typeof p.content === 'string' ? JSON.parse(p.content || '[]') : (p.content || []),
+  };
+}
+
 async function loadPost() {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
 
   if (!slug) { showNotFound(); return; }
 
+  let post = null;
+  let allPosts = [];
+
   try {
-    const res = await fetch('/data/posts.json');
+    // Try CMS API first
+    const res = await fetch('/api/cms/public/sections/blog');
     const data = await res.json();
-    const post = data.posts.find(p => p.slug === slug);
+    allPosts = (data.data || []).map(normalizePost);
+    post = allPosts.find(p => p.slug === slug);
+  } catch(_) {}
 
-    if (!post) { showNotFound(); return; }
+  // Fallback to static JSON during development
+  if (!post) {
+    try {
+      const res = await fetch('/data/posts.json');
+      const data = await res.json();
+      allPosts = data.posts;
+      post = allPosts.find(p => p.slug === slug);
+    } catch(_) {}
+  }
 
-    // Update meta
-    document.getElementById('page-title').textContent = `${post.title} | Bem Seu Tipo`;
-    document.getElementById('page-desc').setAttribute('content', post.excerpt);
-    document.getElementById('og-title').setAttribute('content', post.title);
-    document.getElementById('og-desc').setAttribute('content', post.excerpt);
-    document.getElementById('og-url').setAttribute('content', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
-    document.getElementById('page-canonical').setAttribute('href', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
-    document.title = `${post.title} | Bem Seu Tipo`;
+  if (!post) { showNotFound(); return; }
 
-    // Breadcrumb
-    document.getElementById('bc-title').textContent = post.title;
+  // Update meta
+  document.getElementById('page-title').textContent = `${post.title} | Bem Seu Tipo`;
+  document.getElementById('page-desc').setAttribute('content', post.excerpt);
+  document.getElementById('og-title').setAttribute('content', post.title);
+  document.getElementById('og-desc').setAttribute('content', post.excerpt);
+  document.getElementById('og-url').setAttribute('content', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
+  document.getElementById('page-canonical').setAttribute('href', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
+  document.title = `${post.title} | Bem Seu Tipo`;
 
-    // Hero
-    const badge = document.getElementById('post-category');
-    badge.textContent = post.category;
-    badge.style.background = catColors[post.category] || '#0066FF';
-    document.getElementById('post-title').textContent = post.title;
-    document.getElementById('post-excerpt').textContent = post.excerpt;
-    document.getElementById('post-author').textContent = post.author;
-    document.getElementById('post-date').textContent = formatDate(post.date);
-    document.getElementById('post-read').textContent = `${post.readTime} de leitura`;
+  // Breadcrumb
+  document.getElementById('bc-title').textContent = post.title;
 
-    // Content
-    document.getElementById('post-content').innerHTML = renderContent(post.content);
+  // Hero
+  const badge = document.getElementById('post-category');
+  badge.textContent = post.category;
+  badge.style.background = catColors[post.category] || '#0066FF';
+  document.getElementById('post-title').textContent = post.title;
+  document.getElementById('post-excerpt').textContent = post.excerpt;
+  document.getElementById('post-author').textContent = post.author;
+  document.getElementById('post-date').textContent = formatDate(post.date);
+  document.getElementById('post-read').textContent = `${post.readTime} de leitura`;
 
-    // Related
-    renderRelated(data.posts, slug);
+  // Content
+  document.getElementById('post-content').innerHTML = renderContent(post.content);
 
-    // Show
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('postWrapper').style.display = 'block';
+  // Related
+  renderRelated(allPosts, slug);
 
-  } catch(e) {
+  // Show
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('postWrapper').style.display = 'block';
+
+  try {} catch(e) {
     showNotFound();
   }
 }

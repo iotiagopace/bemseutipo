@@ -177,20 +177,66 @@ function enviarFormulario(){
   );
   document.getElementById('wa-link').href = 'https://wa.me/5517981108073?text=' + msgWa;
 
-  var formData = new FormData();
-  formData.append('nome',    dadosFunil.nome);
-  formData.append('wp',      dadosFunil.wp);
-  formData.append('email',   dadosFunil.email);
-  formData.append('empresa', dadosFunil.empresa);
-  formData.append('insta',   dadosFunil.insta);
-  formData.append('fat',     dadosFunil.fat);
-  formData.append('traf',    dadosFunil.traf);
+  var payload = {
+    name:    dadosFunil.nome,
+    phone:   dadosFunil.wp,
+    email:   dadosFunil.email,
+    empresa: dadosFunil.empresa,
+    insta:   dadosFunil.insta,
+    fat:     dadosFunil.fat,
+    traf:    dadosFunil.traf,
+    subject: 'Diagnóstico BST',
+    message: 'Faturamento: ' + dadosFunil.fat + ' | Tráfego: ' + dadosFunil.traf,
+    source:  'site',
+    utm:     utmData
+  };
 
-  fetch('enviar.php', { method:'POST', body:formData })
-    .then(function(r){ return r.json(); })
+  fetch('/api/cms/leads', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
     .then(function(){ window.location.href = '/obrigado'; })
     .catch(function(){ window.location.href = '/obrigado'; });
 }
+
+/* ===== FAQ DINÂMICO DO CMS ===== */
+(function(){
+  var faqSection = document.getElementById('faq');
+  if (!faqSection) return;
+
+  function buildFaqItem(q, a) {
+    return '<div class="faq-item reveal">' +
+      '<div class="faq-q" onclick="toggleFaq(this)">' +
+        '<span>' + q + '</span>' +
+        '<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg></div>' +
+      '</div>' +
+      '<div class="faq-a"><p>' + a + '</p></div>' +
+    '</div>';
+  }
+
+  fetch('/api/cms/public/sections/faq')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var items = data.data || [];
+      if (!items.length) return;
+      var container = faqSection.querySelector('.faq-inner');
+      if (!container) return;
+      // Remove existing hardcoded items, keep header
+      var header = container.querySelector('.faq-head');
+      container.innerHTML = '';
+      if (header) container.appendChild(header);
+      items.forEach(function(item){
+        var q = item.question || item.title || '';
+        var a = item.answer || '';
+        if (!q || !a) return;
+        container.insertAdjacentHTML('beforeend', buildFaqItem(q, a));
+      });
+      // Re-observe new reveal elements
+      container.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+    })
+    .catch(function(){}); // keep hardcoded on failure
+})();
 
 /* Ativa máscara após DOM pronto */
 document.addEventListener('DOMContentLoaded', function(){

@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+*.local
+.env
+.env.*
+turso-cms.db

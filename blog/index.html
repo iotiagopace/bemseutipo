@@ -295,13 +295,31 @@ function filterPosts(category, btn) {
 
 async function loadPosts() {
   try {
-    const res = await fetch('/data/posts.json');
+    const res = await fetch('/api/cms/public/sections/blog');
     const data = await res.json();
-    allPosts = data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    allPosts = (data.data || [])
+      .map(p => ({
+        ...p,
+        ...(p.data || {}),
+        date: p.created_at?.slice(0,10) || p.date || '',
+        readTime: p.reading_time || p.readTime || '5 min',
+        excerpt: p.excerpt || '',
+        author: p.author || 'BST Marketing',
+      }))
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
     document.getElementById('loading').style.display = 'none';
     renderPosts(allPosts);
   } catch (e) {
-    document.getElementById('loading').innerHTML = '<p>Erro ao carregar os artigos. Tente novamente.</p>';
+    // fallback to static JSON during development
+    try {
+      const res = await fetch('/data/posts.json');
+      const data = await res.json();
+      allPosts = data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      document.getElementById('loading').style.display = 'none';
+      renderPosts(allPosts);
+    } catch {
+      document.getElementById('loading').innerHTML = '<p>Erro ao carregar os artigos. Tente novamente.</p>';
+    }
   }
 }
 
