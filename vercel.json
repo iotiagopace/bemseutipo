@@ -1,22 +1,25 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/index.html",      "destination": "/",      "permanent": true },
     { "source": "/blog/index.html", "destination": "/blog/", "permanent": true },
-    { "source": "/admin.html", "destination": "/admin", "permanent": true }
+    { "source": "/admin.html",      "destination": "/admin", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/servicos",    "destination": "/" },
+    { "source": "/cases",       "destination": "/" },
+    { "source": "/sobre",       "destination": "/" },
+    { "source": "/localizacao", "destination": "/" },
+    { "source": "/diagnostico", "destination": "/" }
   ],
   "headers": [
     {
       "source": "/api/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
-      ]
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]
 }

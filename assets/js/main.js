@@ -6,6 +6,58 @@
   }, {passive:true});
 })();
 
+/* ===== CLEAN URL ROUTING ===== */
+(function(){
+  var pathMap = {
+    '/servicos':    'method',
+    '/cases':       'cases',
+    '/sobre':       'about',
+    '/localizacao': 'location',
+    '/diagnostico': 'diagnostico',
+  };
+  var path = window.location.pathname.replace(/\/$/, '');
+  var targetId = pathMap[path];
+
+  if (targetId) {
+    window.addEventListener('DOMContentLoaded', function(){
+      if (targetId === 'diagnostico') {
+        abrirFunil();
+        history.replaceState(null, '', '/diagnostico');
+        return;
+      }
+      var el = document.getElementById(targetId);
+      if (el) {
+        setTimeout(function(){
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    });
+  }
+
+  /* Update URL on scroll without # */
+  var sections = ['method','cases','about','location'];
+  var reverseMap = { method:'/servicos', cases:'/cases', about:'/sobre', location:'/localizacao' };
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ticking) {
+      requestAnimationFrame(function(){
+        var scrollY = window.scrollY;
+        if (scrollY < 100) { history.replaceState(null,'','/'); ticking=false; return; }
+        for (var i = sections.length-1; i >= 0; i--) {
+          var sec = document.getElementById(sections[i]);
+          if (sec && sec.offsetTop - 120 <= scrollY) {
+            var newPath = reverseMap[sections[i]];
+            if (window.location.pathname !== newPath) history.replaceState(null,'',newPath);
+            break;
+          }
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+})();
+
 /* ===== WHATSAPP FLOAT DELAY ===== */
 setTimeout(function(){
   var wa = document.querySelector('.whatsapp-float');
