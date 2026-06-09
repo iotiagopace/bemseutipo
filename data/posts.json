@@ -1,0 +1,308 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "trafico-pago-sem-estrategia-nao-funciona",
+      "title": "Por que tráfego pago sem estratégia não funciona",
+      "excerpt": "Investir em anúncios no Google ou Meta sem uma estratégia clara é jogar dinheiro fora. Entenda o que separa campanhas que geram resultado das que só geram cliques.",
+      "cover": "/assets/blog/trafico-estrategia.jpg",
+      "category": "Tráfego Pago",
+      "author": "BST Marketing",
+      "date": "2025-06-01",
+      "readTime": "5 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A maioria das empresas que chega até a Bem Seu Tipo tem uma queixa em comum: 'Já investi em tráfego pago e não deu resultado.' E quando a gente vai investigar, o problema raramente é a plataforma — é a falta de estratégia por trás das campanhas."
+        },
+        {
+          "type": "heading",
+          "text": "O que é estratégia de tráfego pago?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estratégia não é escolher entre Google Ads e Meta Ads. Estratégia é entender onde o seu cliente está em cada etapa da jornada de compra e criar mensagens certas para cada uma delas. É o que chamamos de funil completo: topo, meio e fundo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Topo de funil: campanhas de descoberta e consciência de marca",
+            "Meio de funil: campanhas de consideração para quem já te conhece",
+            "Fundo de funil: campanhas de conversão para quem está pronto para comprar"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O erro mais comum"
+        },
+        {
+          "type": "paragraph",
+          "text": "A maioria das agências — e dos gestores amadores — pula direto para o fundo de funil. Cria anúncios gritando 'Compre agora!' para pessoas que nem sabem que a sua empresa existe. O resultado? CPC alto, taxa de conversão baixa, e a sensação de que tráfego pago não funciona."
+        },
+        {
+          "type": "heading",
+          "text": "O que a BST faz diferente"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Bem Seu Tipo, antes de subir qualquer campanha, a gente entende o seu negócio, o seu cliente ideal e o seu ciclo de venda. Só depois a gente define quais plataformas usar — Google, Meta, TikTok, LinkedIn ou YouTube — e como construir o funil certo para o seu mercado."
+        },
+        {
+          "type": "paragraph",
+          "text": "O resultado é o que aconteceu com a Yamaha Tag: 62 motos vendidas em 48 horas. Ou com o Ipê Center Hotel: 80% de ocupação o ano todo. Esses números não aparecem por acaso — aparecem com estratégia."
+        },
+        {
+          "type": "cta",
+          "text": "Quer um diagnóstico gratuito da sua situação atual?",
+          "button": "Falar com a BST",
+          "link": "https://wa.me/5517981108073"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "conteudo-e-trafego-juntos",
+      "title": "Por que conteúdo e tráfego pago precisam andar juntos",
+      "excerpt": "Gestão de conteúdo e tráfego pago não competem entre si — eles se potencializam. Entenda como essa combinação gera resultados que nenhuma das duas estratégias consegue sozinha.",
+      "cover": "/assets/blog/conteudo-trafego.jpg",
+      "category": "Estratégia",
+      "author": "BST Marketing",
+      "date": "2025-05-20",
+      "readTime": "6 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Uma dúvida muito comum entre empresários é: 'Devo investir em conteúdo ou em tráfego pago?' A resposta certa é: nos dois — e de forma integrada."
+        },
+        {
+          "type": "heading",
+          "text": "O que o conteúdo faz que o tráfego não consegue sozinho"
+        },
+        {
+          "type": "paragraph",
+          "text": "O conteúdo constrói confiança ao longo do tempo. Quando alguém vê seus posts consistentemente — com informação relevante, identidade visual coerente e uma voz autêntica — ele passa a reconhecer a sua marca. E reconhecimento é a base para a decisão de compra."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Gera autoridade e credibilidade no mercado",
+            "Cria um público orgânico que não depende de verba",
+            "Alimenta o retargeting com audiências quentes",
+            "Reduz o custo por lead ao longo do tempo"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que o tráfego faz que o conteúdo não consegue sozinho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Conteúdo orgânico é lento. Tráfego pago acelera tudo. Com anúncios, você coloca a mensagem certa na frente da pessoa certa na hora certa — sem esperar meses pelo algoritmo te favorecer."
+        },
+        {
+          "type": "heading",
+          "text": "A combinação que multiplica resultado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Bem Seu Tipo, a gente trabalha as duas frentes de forma integrada. O conteúdo aquece a audiência. O tráfego pago converte essa audiência. Os dados de ambos alimentam a estratégia do mês seguinte. É um ciclo que melhora constantemente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Foi exatamente esse modelo que gerou um retorno de 18x para o Frigo Norte — combinando conteúdo de produto com campanhas de conversão via WhatsApp."
+        },
+        {
+          "type": "cta",
+          "text": "Quer entender como essa estratégia funciona para o seu negócio?",
+          "button": "Solicitar diagnóstico gratuito",
+          "link": "https://wa.me/5517981108073"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "o-que-e-roas-e-por-que-importa",
+      "title": "O que é ROAS e por que ele é a métrica mais importante do seu anúncio",
+      "excerpt": "Muitas empresas acompanham cliques, impressões e alcance — mas ignoram a métrica que realmente diz se o dinheiro investido está valendo a pena.",
+      "cover": "/assets/blog/roas-metrica.jpg",
+      "category": "Performance",
+      "author": "BST Marketing",
+      "date": "2025-05-08",
+      "readTime": "4 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Se você investe em tráfego pago e acompanha só o número de cliques ou o alcance das campanhas, você está olhando para os indicadores errados. A métrica que realmente importa é o ROAS — Return on Ad Spend, ou retorno sobre o investimento em anúncios."
+        },
+        {
+          "type": "heading",
+          "text": "Como calcular o ROAS"
+        },
+        {
+          "type": "paragraph",
+          "text": "A fórmula é simples: ROAS = Receita gerada pelas campanhas ÷ Valor investido em anúncios. Se você investiu R$ 1.000 e gerou R$ 5.000 em vendas, seu ROAS é 5x — ou seja, para cada R$ 1 investido, você trouxe R$ 5 de volta."
+        },
+        {
+          "type": "heading",
+          "text": "Qual ROAS é considerado bom?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depende da margem do seu negócio. Negócios com margens altas (acima de 50%) podem aceitar um ROAS de 3x e ser lucrativos. Negócios com margens menores precisam de um ROAS de 6x, 8x ou mais para compensar os custos."
+        },
+        {
+          "type": "list",
+          "items": [
+            "E-commerce com margem baixa: ROAS mínimo de 6x a 8x",
+            "Serviços com margem alta: ROAS de 3x a 5x já é saudável",
+            "Ticket alto e ciclo longo: ROAS pode parecer baixo, mas o LTV compensa"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que a BST entrega"
+        },
+        {
+          "type": "paragraph",
+          "text": "Todos os nossos clientes têm acesso a um dashboard em tempo real no Looker Studio com ROAS, CPA, CPL e todas as métricas que realmente indicam a saúde das campanhas. Nada de relatório em PDF cheio de número sem contexto."
+        },
+        {
+          "type": "cta",
+          "text": "Quer ver como suas campanhas atuais estão performando?",
+          "button": "Diagnóstico gratuito",
+          "link": "https://wa.me/5517981108073"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "como-escolher-agencia-de-marketing-digital",
+      "title": "Como escolher uma agência de marketing digital: 7 sinais de alerta",
+      "excerpt": "Nem toda agência entrega o que promete. Antes de assinar qualquer contrato, fique atento a esses 7 sinais que podem indicar problemas no futuro.",
+      "cover": "/assets/blog/escolher-agencia.jpg",
+      "category": "Dicas",
+      "author": "BST Marketing",
+      "date": "2025-04-25",
+      "readTime": "7 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Contratar uma agência de marketing digital é uma decisão importante. E infelizmente, o mercado está cheio de promessas que não se sustentam. Antes de assinar qualquer contrato, observe esses 7 sinais de alerta."
+        },
+        {
+          "type": "heading",
+          "text": "1. Garante resultado sem conhecer seu negócio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nenhuma agência séria garante número antes de entender seu mercado, sua margem, seu histórico e seu processo comercial. Promessas como '100 leads por mês' sem contexto são sinal vermelho."
+        },
+        {
+          "type": "heading",
+          "text": "2. Relatório incompreensível"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se você recebe um PDF cheio de gráfico colorido mas sai sem entender se o resultado foi bom ou ruim, há algo errado. Transparência é obrigação, não diferencial."
+        },
+        {
+          "type": "heading",
+          "text": "3. Sem acesso às suas próprias contas"
+        },
+        {
+          "type": "paragraph",
+          "text": "O gerenciador de anúncios, o perfil do Google Meu Negócio, o Analytics — tudo isso é seu. Agência que não te dá acesso está escondendo algo ou te prendendo por dependência."
+        },
+        {
+          "type": "heading",
+          "text": "4. Uma pessoa faz tudo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gestão de tráfego, criação de conteúdo, design e estratégia são especialidades diferentes. Uma pessoa sozinha não consegue fazer tudo bem feito."
+        },
+        {
+          "type": "heading",
+          "text": "5. Sem reuniões regulares"
+        },
+        {
+          "type": "paragraph",
+          "text": "Agência boa quer conversar com o cliente. Se a comunicação é só por mensagem eventual, a estratégia não está sendo construída em conjunto."
+        },
+        {
+          "type": "heading",
+          "text": "6. Proposta genérica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se a proposta parece um template copiado — sem menção ao seu segmento, à sua concorrência ou ao seu ciclo de venda — é porque provavelmente foi."
+        },
+        {
+          "type": "heading",
+          "text": "7. Foco em vaidade e não em resultado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Curtidas, seguidores e alcance são métricas de vaidade. O que importa é lead, custo por venda, ROAS e crescimento de receita. Se a agência não fala dessas métricas, desconfie."
+        },
+        {
+          "type": "cta",
+          "text": "Quer uma segunda opinião sobre suas campanhas atuais?",
+          "button": "Solicitar diagnóstico gratuito",
+          "link": "https://wa.me/5517981108073"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "google-ads-vs-meta-ads-qual-usar",
+      "title": "Google Ads ou Meta Ads: qual é o melhor para o seu negócio?",
+      "excerpt": "A disputa entre Google e Meta é uma das mais frequentes entre empresários. A resposta não é uma ou outra — é entender o momento certo para cada uma.",
+      "cover": "/assets/blog/google-vs-meta.jpg",
+      "category": "Tráfego Pago",
+      "author": "BST Marketing",
+      "date": "2025-04-10",
+      "readTime": "5 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Toda semana alguém nos pergunta: 'Devo anunciar no Google ou no Meta?' A resposta honesta é: depende do seu objetivo, do seu produto e do seu cliente. Mas tem uma lógica clara para decidir."
+        },
+        {
+          "type": "heading",
+          "text": "Google Ads: capturando quem já quer comprar"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Google funciona com intenção. A pessoa digitou 'dentista em Rio Preto' ou 'hotel em Ribeirão Preto' porque está procurando ativamente. Você aparece na hora certa, para a pessoa certa. É o canal ideal para serviços locais, negócios com alta demanda de busca e produtos que as pessoas já conhecem."
+        },
+        {
+          "type": "heading",
+          "text": "Meta Ads: criando desejo em quem ainda não sabe que precisa"
+        },
+        {
+          "type": "paragraph",
+          "text": "O Meta (Facebook e Instagram) funciona com interrupção. Você aparece no feed de alguém que não estava te procurando. Por isso, funciona muito bem para criar desejo, apresentar novos produtos, fazer remarketing e construir marca. É o canal ideal para e-commerce, lançamentos e negócios com visual forte."
+        },
+        {
+          "type": "heading",
+          "text": "A combinação certa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na prática, os melhores resultados vêm de usar os dois em conjunto. O Meta aquece o público e cria reconhecimento de marca. O Google captura esse público quando ele vai buscar ativamente. Juntos, eles cobrem toda a jornada de compra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Foi essa estratégia integrada que gerou os resultados do Ipê Center Hotel e da Yamaha Tag — presença no Meta para criar desejo e captura no Google para fechar."
+        },
+        {
+          "type": "cta",
+          "text": "Quer saber qual combinação faz mais sentido para o seu negócio?",
+          "button": "Conversar com a BST",
+          "link": "https://wa.me/5517981108073"
+        }
+      ]
+    }
+  ]
+}

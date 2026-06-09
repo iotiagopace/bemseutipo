@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58W2MWVM');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Artigo | Bem Seu Tipo</title>
+<meta name="description" id="page-desc" content="">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Bem Seu Tipo | BST Marketing & Performance">
+<link rel="canonical" id="page-canonical" href="https://bemseutipo.com.br/blog/post/">
+<meta property="og:title" id="og-title" content="">
+<meta property="og:description" id="og-desc" content="">
+<meta property="og:type" content="article">
+<meta property="og:url" id="og-url" content="">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#0066FF;--blue-dark:#003DB3;--blue-light:#1A8FFF;
+  --cyan:#00C2FF;--black:#080A0F;--dark:#0E1420;--dark2:#16202E;
+  --gray:#8B95A3;--gray-light:#F5F6F8;--white:#FFFFFF;
+  --grad:linear-gradient(135deg,#003DB3 0%,#0066FF 55%,#00C2FF 100%);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+
+/* NAV */
+nav{background:var(--black);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:-0.5px}
+.nav-logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-cta{background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:3px;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--blue-light)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--dark);padding:14px 6%;border-bottom:1px solid rgba(255,255,255,.05)}
+.breadcrumb-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.3)}
+.breadcrumb a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:rgba(255,255,255,.6)}
+.breadcrumb-sep{opacity:.3}
+.breadcrumb-current{color:rgba(255,255,255,.5)}
+
+/* POST HERO */
+.post-hero{background:var(--black);padding:56px 6% 64px;position:relative;overflow:hidden}
+.post-hero::before{content:'';position:absolute;top:-20%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,102,255,.15) 0%,transparent 65%);pointer-events:none}
+.post-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.post-category-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;padding:5px 14px;border-radius:100px;margin-bottom:24px}
+.post-hero h1{font-weight:800;font-size:clamp(26px,4vw,46px);color:#fff;line-height:1.1;margin-bottom:20px}
+.post-hero-excerpt{font-size:17px;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:32px}
+.post-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.post-meta-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.35)}
+.post-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.2)}
+
+/* LAYOUT */
+.post-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;max-width:1080px;margin:0 auto;padding:56px 6% 80px;align-items:start}
+.post-content-wrap{}
+.post-sidebar{}
+
+/* CONTENT */
+.post-content{font-size:16px;line-height:1.85;color:#2A2D35}
+.post-content h2{font-weight:800;font-size:22px;color:var(--black);margin:40px 0 16px;line-height:1.25}
+.post-content p{margin-bottom:20px}
+.post-content ul{padding-left:24px;margin-bottom:20px}
+.post-content ul li{margin-bottom:10px;color:#2A2D35}
+.post-cta-block{background:var(--black);border-radius:12px;padding:32px;margin:40px 0;text-align:center;position:relative;overflow:hidden}
+.post-cta-block::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(0,102,255,.2) 0%,transparent 65%);pointer-events:none}
+.post-cta-block p{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:20px;position:relative;z-index:1}
+.post-cta-block a{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:3px;text-decoration:none;transition:all .2s;position:relative;z-index:1}
+.post-cta-block a:hover{background:var(--blue-light)}
+
+/* SIDEBAR */
+.sidebar-card{background:var(--gray-light);border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid rgba(0,0,0,.06)}
+.sidebar-card h3{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:18px}
+.sidebar-cta-card{background:var(--black);border-radius:12px;padding:28px;margin-bottom:24px;text-align:center;position:relative;overflow:hidden}
+.sidebar-cta-card::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:200px;height:200px;background:radial-gradient(circle,rgba(0,102,255,.2) 0%,transparent 65%);pointer-events:none}
+.sidebar-cta-card h3{font-size:15px;font-weight:800;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.sidebar-cta-card p{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:20px;line-height:1.6;position:relative;z-index:1}
+.sidebar-cta-card a{display:block;background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px;padding:12px 20px;border-radius:3px;text-decoration:none;transition:all .2s;position:relative;z-index:1}
+.sidebar-cta-card a:hover{background:var(--blue-light)}
+.related-post{display:flex;gap:14px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,.08);text-decoration:none;color:inherit}
+.related-post:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.related-thumb{width:56px;height:56px;border-radius:8px;background:var(--grad);flex-shrink:0}
+.related-info{}
+.related-cat{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.related-title{font-size:13px;font-weight:600;color:var(--black);line-height:1.35}
+
+/* BACK LINK */
+.post-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;margin-bottom:32px}
+.post-back svg{transition:transform .2s}
+.post-back:hover svg{transform:translateX(-3px)}
+
+/* NOT FOUND */
+#notFound{text-align:center;padding:80px 6%;display:none}
+#notFound h2{font-size:28px;font-weight:800;margin-bottom:12px}
+#notFound p{color:var(--gray);margin-bottom:28px}
+
+/* LOADING */
+#loading{text-align:center;padding:80px}
+.spinner{width:32px;height:32px;border:3px solid rgba(0,102,255,.15);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* CTA SECTION */
+.blog-cta{background:var(--black);padding:72px 6%;text-align:center;position:relative;overflow:hidden}
+.blog-cta::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,102,255,.15) 0%,transparent 65%);pointer-events:none}
+.blog-cta-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.blog-cta h2{font-weight:800;font-size:clamp(24px,3.5vw,40px);color:#fff;line-height:1.15;margin-bottom:16px}
+.blog-cta p{font-size:16px;color:rgba(255,255,255,.45);margin-bottom:36px;line-height:1.7}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:15px;padding:15px 34px;border-radius:3px;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:var(--blue-light);transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,102,255,.4)}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:36px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-brand{font-weight:800;font-size:15px;color:#fff}
+.footer-brand span{color:var(--cyan)}
+.footer-links{display:flex;gap:24px;list-style:none}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.2)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .ham{display:flex}
+  .post-layout{grid-template-columns:1fr;gap:32px;padding:36px 5% 60px}
+  .post-sidebar{order:-1}
+  footer{flex-direction:column;text-align:center}
+  .footer-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58W2MWVM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav>
+  <a href="/" class="nav-logo">Bem Seu <span>Tipo</span></a>
+  <ul class="nav-links">
+    <li><a href="/#forwho">Para quem</a></li>
+    <li><a href="/#method">Serviços</a></li>
+    <li><a href="/#cases">Casos de sucesso</a></li>
+    <li><a href="/#about">Sobre</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+  </ul>
+  <a href="https://wa.me/5517981108073" class="nav-cta" target="_blank" rel="noopener">Diagnóstico grátis</a>
+  <button class="ham" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p style="color:var(--gray)">Carregando artigo…</p>
+</div>
+
+<div id="notFound">
+  <h2>Artigo não encontrado</h2>
+  <p>O artigo que você procura não existe ou foi removido.</p>
+  <a href="/blog/" class="btn-primary">Ver todos os artigos</a>
+</div>
+
+<div id="postWrapper" style="display:none">
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Início</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/blog/">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current" id="bc-title"></span>
+    </div>
+  </div>
+
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <span class="post-category-badge" id="post-category"></span>
+      <h1 id="post-title"></h1>
+      <p class="post-hero-excerpt" id="post-excerpt"></p>
+      <div class="post-meta-row">
+        <span class="post-meta-item" id="post-author"></span>
+        <span class="post-meta-dot"></span>
+        <span class="post-meta-item" id="post-date"></span>
+        <span class="post-meta-dot"></span>
+        <span class="post-meta-item" id="post-read"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-layout">
+    <article class="post-content-wrap">
+      <a href="/blog/" class="post-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voltar ao blog
+      </a>
+      <div class="post-content" id="post-content"></div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-cta-card">
+        <h3>Pronto para crescer?</h3>
+        <p>Diagnóstico gratuito e sem compromisso com a equipe da BST.</p>
+        <a href="https://wa.me/5517981108073" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Outros artigos</h3>
+        <div id="related-posts"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="blog-cta">
+  <div class="blog-cta-inner">
+    <h2>Pronto para transformar marketing em resultado?</h2>
+    <p>Diagnóstico gratuito e sem compromisso. A gente analisa sua situação atual e mostra o caminho.</p>
+    <a href="https://wa.me/5517981108073" class="btn-primary" target="_blank" rel="noopener">
+      Falar com a BST
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Bem Seu <span>Tipo</span></div>
+  <ul class="footer-links">
+    <li><a href="/">Início</a></li>
+    <li><a href="/#method">Serviços</a></li>
+    <li><a href="/#cases">Casos</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="https://wa.me/5517981108073" target="_blank" rel="noopener">Contato</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 Bem Seu Tipo. Todos os direitos reservados.</span>
+</footer>
+
+<script>
+const catColors = {
+  'Tráfego Pago':'#0066FF',
+  'Estratégia':'#7C3AED',
+  'Performance':'#059669',
+  'Dicas':'#D97706'
+};
+
+function formatDate(dateStr) {
+  const [year, month, day] = dateStr.split('-');
+  const months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  return `${parseInt(day)} de ${months[parseInt(month)-1]} de ${year}`;
+}
+
+function renderContent(blocks) {
+  return blocks.map(block => {
+    switch(block.type) {
+      case 'paragraph':
+        return `<p>${block.text}</p>`;
+      case 'heading':
+        return `<h2>${block.text}</h2>`;
+      case 'list':
+        return `<ul>${block.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      case 'cta':
+        return `
+          <div class="post-cta-block">
+            <p>${block.text}</p>
+            <a href="${block.link}" target="_blank" rel="noopener">
+              ${block.button}
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>`;
+      default:
+        return '';
+    }
+  }).join('');
+}
+
+function renderRelated(posts, currentSlug) {
+  const related = posts.filter(p => p.slug !== currentSlug).slice(0, 3);
+  const container = document.getElementById('related-posts');
+  container.innerHTML = related.map(p => `
+    <a href="/blog/post/?slug=${p.slug}" class="related-post">
+      <div class="related-thumb"></div>
+      <div class="related-info">
+        <div class="related-cat">${p.category}</div>
+        <div class="related-title">${p.title}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+async function loadPost() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+
+  if (!slug) { showNotFound(); return; }
+
+  try {
+    const res = await fetch('/data/posts.json');
+    const data = await res.json();
+    const post = data.posts.find(p => p.slug === slug);
+
+    if (!post) { showNotFound(); return; }
+
+    // Update meta
+    document.getElementById('page-title').textContent = `${post.title} | Bem Seu Tipo`;
+    document.getElementById('page-desc').setAttribute('content', post.excerpt);
+    document.getElementById('og-title').setAttribute('content', post.title);
+    document.getElementById('og-desc').setAttribute('content', post.excerpt);
+    document.getElementById('og-url').setAttribute('content', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
+    document.getElementById('page-canonical').setAttribute('href', `https://bemseutipo.com.br/blog/post/?slug=${slug}`);
+    document.title = `${post.title} | Bem Seu Tipo`;
+
+    // Breadcrumb
+    document.getElementById('bc-title').textContent = post.title;
+
+    // Hero
+    const badge = document.getElementById('post-category');
+    badge.textContent = post.category;
+    badge.style.background = catColors[post.category] || '#0066FF';
+    document.getElementById('post-title').textContent = post.title;
+    document.getElementById('post-excerpt').textContent = post.excerpt;
+    document.getElementById('post-author').textContent = post.author;
+    document.getElementById('post-date').textContent = formatDate(post.date);
+    document.getElementById('post-read').textContent = `${post.readTime} de leitura`;
+
+    // Content
+    document.getElementById('post-content').innerHTML = renderContent(post.content);
+
+    // Related
+    renderRelated(data.posts, slug);
+
+    // Show
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('postWrapper').style.display = 'block';
+
+  } catch(e) {
+    showNotFound();
+  }
+}
+
+function showNotFound() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('notFound').style.display = 'block';
+}
+
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  const cta = document.querySelector('.nav-cta');
+  const open = links.style.display === 'flex';
+  links.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--black);padding:16px 6%;gap:16px;border-bottom:1px solid rgba(255,255,255,.08)';
+  cta.style.display = open ? '' : 'block';
+}
+
+loadPost();
+</script>
+</body>
+</html>
